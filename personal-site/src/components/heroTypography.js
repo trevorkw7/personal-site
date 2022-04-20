@@ -1,31 +1,29 @@
 import React from "react";
+import ButtonRow from "./buttonRow";
 
 // hero typography, requires name and description variables
 const HeroTypography = (props) => {
     const NAME = "Trevor";
-    const DESCRIPTION = ['Self-Starter // Developer // Entrepreneur', 'Mathematics and Computer Science Major @ UCSD', 'Founder of Notes For Frontliners']
+    const DESCRIPTION = ['Self-Starter // Developer // Lifelong-Learner', 'Mathematics and Computer Science Major @ UCSD']
 
-    return (
-        <div className="flex flex-col flex-auto w-6/12 px-10  ">
-            <div className="flex flex-col flex-auto w-full justify-center">
+    return ( 
+        <div className="flex flex-col justify-center grow px-10  ">
                 <p className="text-titleColor text-3xl text-left py-3">
                 Hello, I'm
                 </p>
                 <p className="text-titleColor text-8xl text-left py-3">
                 {NAME}.
                 </p>
-            </div>
-            <div className="flex flex-col flex-auto w-full justify-center">
                 {DESCRIPTION.map((line) => (
                     <p className="text-textColor text-lg text-left py-2">
                         {line}
                     </p>
                 ))}
-                {console.log(DESCRIPTION)}
-            </div>
-            <div className="flex-auto w-32">
+                 <p className="text-textColor text-lg text-left py-2">
+                     Founder of <a className="underline"href="https://notesforfrontliners.org/">Notes For Frontliners</a>
+                 </p>
+                <ButtonRow />
 
-            </div>
         </div>
     )
 }
